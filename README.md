@@ -3,5 +3,5 @@
 ## Install
 
 ```shell
-brew install warpdl/warpdl/warpdl
+brew install warpdl/tap/warpdl
 ```
