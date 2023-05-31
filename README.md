@@ -1,2 +1,7 @@
-# homebrew-warpdl
-Homebrew package manager for Warpdl CLI
+# Warpdl homebrew tap
+
+## Install
+
+```shell
+brew install warpdl/warpdl/warpdl
+```
