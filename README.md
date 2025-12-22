@@ -15,13 +15,13 @@ brew tap warpdl/tap
 brew install warpdl
 ```
 
-Upgrade
+## Upgrade
 
 ```bash
 brew upgrade warpdl
 ```
 
-Uninstall
+## Uninstall
 
 ```bash
 brew uninstall warpdl
