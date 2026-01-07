@@ -5,21 +5,21 @@
 class Warpdl < Formula
   desc "The official Warp CLI download manager"
   homepage "https://github.com/warpdl/warpdl"
-  version "1.3.26"
+  version "1.3.27"
   license "MIT"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/warpdl/warpdl/releases/download/v1.3.26/warpdl_1.3.26_macOS_amd64.tar.gz"
-      sha256 "286cb7b82c8002624239a8a6fdf959d9c689f2e88877da809a5b608784d39e43"
+      url "https://github.com/warpdl/warpdl/releases/download/v1.3.27/warpdl_1.3.27_macOS_amd64.tar.gz"
+      sha256 "740881404b11bf6b75682ef56d4fc7822c666f7c8f1c35cfd9517ebfde9967ac"
 
       def install
         bin.install "warpdl"
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/warpdl/warpdl/releases/download/v1.3.26/warpdl_1.3.26_macOS_arm64.tar.gz"
-      sha256 "d41a13f552f8e1f437048c342a48accfaf17e9dea45395e7fcb10c84892c39bc"
+      url "https://github.com/warpdl/warpdl/releases/download/v1.3.27/warpdl_1.3.27_macOS_arm64.tar.gz"
+      sha256 "d36b9810a7337b574de0222835c755ff3eb13efb49a48133e1712b526a3cbcc3"
 
       def install
         bin.install "warpdl"
@@ -29,22 +29,22 @@ class Warpdl < Formula
 
   on_linux do
     if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
-      url "https://github.com/warpdl/warpdl/releases/download/v1.3.26/warpdl_1.3.26_linux_amd64.tar.gz"
-      sha256 "6cfa6254874c3561606a38755f5ccbbac9e9ce5132f91e4de0aba2224a3902ca"
+      url "https://github.com/warpdl/warpdl/releases/download/v1.3.27/warpdl_1.3.27_linux_amd64.tar.gz"
+      sha256 "149773c8914097a65ff28012e50f3fa716b8ce63795bf036b9bae66158bd1035"
       def install
         bin.install "warpdl"
       end
     end
     if Hardware::CPU.arm? && !Hardware::CPU.is_64_bit?
-      url "https://github.com/warpdl/warpdl/releases/download/v1.3.26/warpdl_1.3.26_linux_armv6.tar.gz"
-      sha256 "06129bbcd9f5025177cba7f1cddebf1dfbd118a100f2d6a6857f1b311ed0e7b7"
+      url "https://github.com/warpdl/warpdl/releases/download/v1.3.27/warpdl_1.3.27_linux_armv6.tar.gz"
+      sha256 "a3953020946f1c875de7f07f3473a000a53747ffae959b934d853b9eb27a4cfc"
       def install
         bin.install "warpdl"
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/warpdl/warpdl/releases/download/v1.3.26/warpdl_1.3.26_linux_arm64.tar.gz"
-      sha256 "f63b20540be1fd9e37de788cd29c8403dc2efd9f90b189b7c17b341ac80897e6"
+      url "https://github.com/warpdl/warpdl/releases/download/v1.3.27/warpdl_1.3.27_linux_arm64.tar.gz"
+      sha256 "2ca8539262b30ed015bc99d88ea1b71b621eb9e1fcd073dbf4c17be5e23db5a9"
       def install
         bin.install "warpdl"
       end
