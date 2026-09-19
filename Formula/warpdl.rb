@@ -5,21 +5,21 @@
 class Warpdl < Formula
   desc "The official Warp CLI download manager"
   homepage "https://github.com/warpdl/warpdl"
-  version "1.4.6"
+  version "1.5"
   license "MIT"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/warpdl/warpdl/releases/download/v1.4.6/warpdl_1.4.6_macOS_amd64.tar.gz"
-      sha256 "1c89eef372ca7340c9e0ce3fac63053ccd07c8f146a9d210415e5d23a99cac45"
+      url "https://github.com/warpdl/warpdl/releases/download/v1.5/warpdl_1.5_macOS_amd64.tar.gz"
+      sha256 "a32f9bdfdbba3b7a0307501b780d861f89cce4478d22fa61227fb492977f86c9"
 
       define_method(:install) do
         bin.install "warpdl"
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/warpdl/warpdl/releases/download/v1.4.6/warpdl_1.4.6_macOS_arm64.tar.gz"
-      sha256 "32270a39645f82e61deb67e7370c8c4a1ee993bc7b02929ab8fd5bbaab66d8ce"
+      url "https://github.com/warpdl/warpdl/releases/download/v1.5/warpdl_1.5_macOS_arm64.tar.gz"
+      sha256 "9b7bc07eb72514471dabc9f622af026f73aa8223783b949d67f6f2a9d0097643"
 
       define_method(:install) do
         bin.install "warpdl"
@@ -29,22 +29,22 @@ class Warpdl < Formula
 
   on_linux do
     if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
-      url "https://github.com/warpdl/warpdl/releases/download/v1.4.6/warpdl_1.4.6_linux_amd64.tar.gz"
-      sha256 "453968f793803dab8e43aa7ea2c95394e1f4ab331d4cc8b78e1c72fb22078dd2"
+      url "https://github.com/warpdl/warpdl/releases/download/v1.5/warpdl_1.5_linux_amd64.tar.gz"
+      sha256 "95fa6060cd7f2966461c38791d234d714a8fa202a961d7a9151105b71c0ef7bf"
       define_method(:install) do
         bin.install "warpdl"
       end
     end
     if Hardware::CPU.arm? && !Hardware::CPU.is_64_bit?
-      url "https://github.com/warpdl/warpdl/releases/download/v1.4.6/warpdl_1.4.6_linux_armv6.tar.gz"
-      sha256 "76e355aae80c89506d2c998c285a40f4bb0a9689ba4956a99a06a5ddb59bb1ee"
+      url "https://github.com/warpdl/warpdl/releases/download/v1.5/warpdl_1.5_linux_armv6.tar.gz"
+      sha256 "8d53ad3134a6da93fe19a29f61132b7652c28231aa0a7c174482961fb31fb069"
       define_method(:install) do
         bin.install "warpdl"
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/warpdl/warpdl/releases/download/v1.4.6/warpdl_1.4.6_linux_arm64.tar.gz"
-      sha256 "22abdd5bd4787657e40ba31eac762ac3995172e3fa74d3ff33b2ceaf9138305d"
+      url "https://github.com/warpdl/warpdl/releases/download/v1.5/warpdl_1.5_linux_arm64.tar.gz"
+      sha256 "abd10a7957c1629c3eb0b4cbebc9e5366d93baab6f1a75cbae2e9a9abb74d333"
       define_method(:install) do
         bin.install "warpdl"
       end
@@ -57,12 +57,6 @@ class Warpdl < Formula
       system "#{bin}/warpdl", "stop-daemon"
     rescue
       # Daemon wasn't running, that's fine
-    end
-    # Install native messaging host for browser extensions
-    begin
-      system "#{bin}/warpdl", "native-host", "install", "--auto"
-    rescue
-      # Installation failed, user can run manually if needed
     end
   end
 
@@ -79,7 +73,6 @@ class Warpdl < Formula
 
       IMPORTANT: Before uninstalling, run:
         brew services stop warpdl
-        warpdl native-host uninstall --browser all
         brew uninstall warpdl
     EOS
   end
